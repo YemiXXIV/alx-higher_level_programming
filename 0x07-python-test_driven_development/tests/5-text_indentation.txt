@@ -1,0 +1,30 @@
+# Import module
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+#Test if text is string
+>>> text_indentation("Who are you? I am Mustapha Yinusa.")
+Who are you?
+<BLANKLINE>
+I am Mustapha Yinusa.
+
+#Test if Zero arguments is passed
+>>> text_indentation()
+Traceback (most recent call last):
+	...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+#Test if String is without any symbols
+>>> text_indentation("My name is Mustapha Yinusa")
+My name is Mustapha Yinusa
+
+#Test if text is not string
+>>> text_indentation(98)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+#Test if multiple characters are in close proximity
+>>> text_indentation("hello?? what is on your mind")
+hello??
+<BLANKLINE>
+what is on your mind

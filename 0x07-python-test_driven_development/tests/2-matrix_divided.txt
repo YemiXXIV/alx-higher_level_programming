@@ -1,0 +1,62 @@
+Import the method
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test Cases
+>>> matrix = [
+...	[1, 2, 3],
+...	[4, 5, 6]
+... ]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+#Test with a matrix containing negative numbers
+>>> matrix = [
+...     [-1, -2, -3],
+...     [-4, -5, -6]
+... ]
+>>> matrix_divided(matrix, 2)
+[[-0.5, -1.0, -1.5], [-2.0, -2.5, -3.0]]
+
+#Test with a larger matrix
+>>> matrix = [
+...     [10, 20, 30, 40],
+...     [50, 60, 70, 80],
+...     [90, 100, 110, 120]
+... ]
+>>> matrix_divided(matrix, 5)
+[[2.0, 4.0, 6.0, 8.0], [10.0, 12.0, 14.0, 16.0], [18.0, 20.0, 22.0, 24.0]]
+
+#Test with a matrix containing only one row
+>>> matrix = [[10, 20, 30, 40]]
+>>> matrix_divided(matrix, 2)
+[[5.0, 10.0, 15.0, 20.0]]
+
+#Test With one value as string
+>>> matrix = [
+...     [1, 'b', 3],
+...     [4, 5, 6]
+... ]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+#Test With div being not a number or float
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> matrix_divided(matrix, 'b')
+Traceback (most recent call last):
+	...
+TypeError: div must be a number
+
+#Test matrix list not the same size
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5]
+... ]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+	...
+TypeError: Each row of the matrix must have the same size

@@ -1,0 +1,51 @@
+Import the method
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Start running tests
+# Test with valid integers
+>>> add_integer(1,2)
+3
+
+# Test with a negative integer value
+>>> add_integer(100, -2)
+98
+
+#Test with only one value
+>>> add_integer(2)
+100
+
+#Test with a float
+>>> add_integer(100.3, -2)
+98
+
+#Test with a string
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+#Test with None as an output
+>>> add_integer(None)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+#Test with large integers
+>>> add_integer(1000000, 2000000)
+3000000
+
+#Test with zero as the first value
+>>> add_integer(0, 50)
+50
+
+#Test with zero as the second value
+>>> add_integer(10, 0)
+10
+
+#Test NaN
+>>> add_integer(float("nan"), 5)
+Traceback (most recent call last):
+	  ...
+ValueError: cannot convert float NaN to integer
+
+#end
