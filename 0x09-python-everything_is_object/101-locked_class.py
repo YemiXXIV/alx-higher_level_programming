@@ -4,6 +4,8 @@
 Class tha prevents dynamic instances creation
 
 """
+
+
 class LockedClass:
     def __setattr__(self, name, value):
         """ set attribute method """
