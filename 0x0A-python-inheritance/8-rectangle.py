@@ -12,7 +12,7 @@ class BaseGeometry:
     A class representing the geometry
     """
 
-    def area(self):
+    def area(self, width, height):
         """
         Raises an Exception indicating that area() is not implemented
         """
@@ -39,8 +39,8 @@ class Rectangle(BaseGeometry):
         Initializes a rectangle instance with specified
         width and height
         """
-        super().__init__()
         self.__width = width
         self.__height = height
-        self.integer_validator("width", self.__width)
-        self.integer_validator("height", self.__height)
+
+        BaseGeometry.integer_validator(self, "width", self.__width)
+        BaseGeometry.integer_validator(self, "height", self.__height)
