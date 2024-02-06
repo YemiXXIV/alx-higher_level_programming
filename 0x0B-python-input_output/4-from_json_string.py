@@ -2,7 +2,8 @@
 
 """
 
-A function that returns an object(Python data structure) represented by a JSON string
+A function that returns an object(Python data structure)
+represented by a JSON string
 
 """
 import json
