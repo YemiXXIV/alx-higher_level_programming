@@ -9,8 +9,8 @@ import sys
 
 def main():
     """
-    List all states with names starting with N
-    from database hbnt_0e_0_usa
+    List of all states with names starting with N
+    from database
     """
     HOST = 'localhost'
     PORT = 3306
@@ -24,15 +24,15 @@ def main():
             passwd=PASSWORD,
             db=DATABASE
     )
-    cursor = db.cursor()
-    firstQuery = "SELECT id, name FROM states WHERE name"
-    secondQuery = "LIKE BINARY 'N%' ORDER BY id ASC"
-    finalQuery = firstQuery + secondQuery
-    cursor.execute(finalQuery)
-    result = cursor.fetchall()
+    cur = db.cursor()
+    f_Query = "SELECT id, name FROM states WHERE name "
+    s_Query = "LIKE BINARY 'N%' ORDER BY id ASC"
+    finalQuery = f_Query + s_Query
+    cur.execute(finalQuery)
+    result = cur.fetchall()
     for row in result:
         print(row)
-    cursor.close()
+    cur.close()
     db.close()
 
 
