@@ -9,7 +9,7 @@ import sys
 
 def main():
     """
-    Python script that takes in a letter and sends a POST request 
+    Python script that takes in a letter and sends a POST request
     with letter as parameter
     """
     url = "http://0.0.0.0:5000/search_user"
@@ -23,7 +23,8 @@ def main():
     try:
         json_response = response.json()
         if json_response:
-            print("[{}] {}".format(json_response.get('id'), json_response.get('name')))
+            print("[{}] {}".format(json_response.get('id'),
+                                   json_response.get('name')))
         else:
             print("No result")
     except ValueError:
