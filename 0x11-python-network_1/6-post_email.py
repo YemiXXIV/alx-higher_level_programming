@@ -18,7 +18,6 @@ def main():
     data = {'email': email}
     response = requests.post(url, data=data)
 
-    print("Response body:")
     print(response.text)
 
 
