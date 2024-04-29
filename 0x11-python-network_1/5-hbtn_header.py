@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Python script that takes in URL, sends request and displays the value using the request package
+Python script that takes in URL, sends request and displays
+the value using the request package
 """
 import sys
 import requests
