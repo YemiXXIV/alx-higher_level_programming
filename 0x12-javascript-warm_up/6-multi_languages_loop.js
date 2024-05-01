@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-const keys = ["C is fun", "Python is cool", "JavaScript is amazing"];
+const values = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 let i = 0;
 
-while (i < keys.length) {
-    console.log(keys[i]);
-    i++;
+while (i < 3) {
+  console.log(values[i]);
+  i++;
 }
