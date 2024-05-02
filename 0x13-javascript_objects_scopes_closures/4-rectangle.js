@@ -11,7 +11,7 @@ class Rectangle {
   print () {
     let i = 0;
     let j = 0;
-      let print_width = '';
+    let print_width = '';
     while (i < this.width) {
       print_width = print_width + 'X';
       i++;
