@@ -8,12 +8,17 @@ class Rectangle {
     }
   }
 
-  print() {
-    if (this.width === undefined || this.height === undefined) {
-     return;
+print () {
+    let i = 0;
+    let j = 0;
+    let width_of_Print = '';
+    while (i < this.width) {
+      width_of_Print = width_of_Print + 'X';
+      i++;
     }
-    for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
+    while (j < this.height) {
+      console.log(width_of_Print);
+      j++;
     }
   }
 }
