@@ -11,13 +11,13 @@ class Rectangle {
   print () {
     let i = 0;
     let j = 0;
-    let print_width = '';
+    let printWidth = '';
     while (i < this.width) {
-      print_width = print_width + 'X';
+      printWidth = printWidth + 'X';
       i++;
     }
     while (j < this.height) {
-      console.log(print_width);
+      console.log(printWidth);
       j++;
     }
   }
