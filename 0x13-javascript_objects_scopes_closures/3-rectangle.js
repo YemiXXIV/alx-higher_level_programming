@@ -8,7 +8,7 @@ class Rectangle {
     }
   }
 
-print () {
+  print () {
     let i = 0;
     let j = 0;
     let width_of_Print = '';
