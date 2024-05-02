@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const n= parseInt(process.argv[2]);
+const n = parseInt(process.argv[2]);
 let result = 1;
 
 if (isNaN(n)) {
