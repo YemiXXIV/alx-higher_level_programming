@@ -8,8 +8,8 @@ class Rectangle {
     }
   }
 
- print() {
-    if (this.width === undefined || this.height === undefined) {
+    print() {
+	if (this.width === undefined || this.height === undefined) {
       return;
     }
     for (let i = 0; i < this.height; i++) {
