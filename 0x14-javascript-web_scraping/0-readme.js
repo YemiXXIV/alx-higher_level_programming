@@ -1,6 +1,7 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /*
- * This script reads and prints the content of a file specified by the first argument.
+ * This script reads and prints the content of a file specified by
+ * the first argument.
  * 
  * The file content is read in utf-8 encoding.
  * If an error occurs during reading, the error object is printed.
