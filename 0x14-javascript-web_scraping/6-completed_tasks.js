@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /*
  * This script computes the number of tasks
  * completed by user ID.
