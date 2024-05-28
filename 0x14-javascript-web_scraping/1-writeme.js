@@ -21,5 +21,4 @@ fs.writeFile(filePath, content, 'utf8', (err) => {
     console.error('Error writing to file:', err);
     return;
   }
-  console.log('File written successfully');
 });
