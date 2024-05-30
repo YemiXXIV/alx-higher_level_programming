@@ -19,15 +19,28 @@ request(urls, function (error, response, body) {
   const film = JSON.parse(body);
   const characterUrls = film.characters;
 
-  characterUrls.forEach(url => {
-    request(url, function (error, response, body) {
-      if (error) {
-        console.error('Error:', error);
-        return;
-      }
-
-      const character = JSON.parse(body);
-      console.log(character.name);
-    });
-  });
+  fetchCharactersSequentially(characterUrls);
 });
+
+function fetchCharactersSequentially(urls) {
+  const fetchCharacterName = (url) => {
+    return new Promise((resolve, reject) => {
+      request(url, function (error, response, body) {
+        if (error) {
+          reject(error);
+          return;
+        }
+        const character = JSON.parse(body);
+        resolve(character.name);
+      });
+    });
+  };
+
+  urls.reduce((promiseChain, currentUrl) => {
+    return promiseChain.then(() => {
+      return fetchCharacterName(currentUrl).then((name) => {
+        console.log(name);
+      });
+    });
+  }, Promise.resolve());
+}
