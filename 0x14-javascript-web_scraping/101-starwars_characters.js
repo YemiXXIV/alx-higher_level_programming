@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 /*
  * This script fetches and prints the names of all characters
