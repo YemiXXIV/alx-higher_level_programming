@@ -22,7 +22,7 @@ request(urls, function (error, response, body) {
   fetchCharactersSequentially(characterUrls);
 });
 
-function fetchCharactersSequentially(urls) {
+function fetchCharactersSequentially (urls) {
   const fetchCharacterName = (url) => {
     return new Promise((resolve, reject) => {
       request(url, function (error, response, body) {
